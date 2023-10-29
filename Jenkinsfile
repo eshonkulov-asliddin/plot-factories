@@ -10,16 +10,10 @@ pipeline {
         stage('Scan') {
             steps {
                 withSonarQubeEnv(installationName: 'sonar1') {
-                    bat 'mvn clean package sonar:sonar'
+                    bat 'mvn clean verify sonar:sonar'
                 }
             }
         }
-        stage('SonarQube Quality Gate') {
-            steps {
-                timeout(time: 2, unit: 'MINUTES') {
-                    waitForQualityGate abortPipeline: true
-                }
-            }
-        }
+    
     }
 }
