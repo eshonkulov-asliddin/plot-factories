@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 pipeline {
 
-    def tomcatWeb = 'C:\\tomcat\\apache-tomcat-9.0.82\\webapps'
+    def tomcatWeb = "C:\\tomcat\\apache-tomcat-9.0.82\\webapps"
     
     agent any
 
