@@ -44,6 +44,14 @@
                     <version>3.0.0-M3</version>
                 </plugin>
 
+                  <plugin>
+                           <artifactId>maven-war-plugin</artifactId>
+                           <version>3.4.1-SNAPSHOT</version>
+                           <configuration>
+                           <attachClasses>true</attachClasses>
+                           </configuration>
+                  </plugin>
+
                 <plugin>
                     <groupId>org.jacoco</groupId>
                     <artifactId>jacoco-maven-plugin</artifactId>
