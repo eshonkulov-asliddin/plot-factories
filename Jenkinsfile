@@ -1,8 +1,5 @@
 #!/usr/bin/env groovy
 pipeline {
-
-    def tomcatWeb = "C:\\tomcat\\apache-tomcat-9.0.82\\webapps"
-    
     agent any
 
     tools {
@@ -25,12 +22,5 @@ pipeline {
                 }
             }
         }
-
-        stage('Deploy to Tomcat') {
-            steps {
-                bat "copy target\\filter-1.0-SNAPSHOT.war \"${tomcatWeb}\\filter-1.0-SNAPSHOT.war\""
-            }
-        }
-    
     }
 }
